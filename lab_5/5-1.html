@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+       <title>Ахметова Карина</title>
+       <script>
+        function processString() {
+            var string = prompt("Введите строку:");
+            var modifiedString = string.replace(/,/g, ", ");
+            var dotCount = modifiedString.split("A").length - 1;
+            var commaCount = modifiedString.split("B").length - 1;
+            document.getElementById("originalString").innerHTML = "Начальная строка: " + string;
+            document.getElementById("modifiedString").innerHTML = "Измененная строка: " + modifiedString;
+            document.getElementById("dotCount").innerHTML = "A: " + dotCount;
+            document.getElementById("commaCount").innerHTML = "B: " + commaCount;
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <button onclick="processString()">Введите строку</button>
+    <div id="originalString"></div>
+    <div id="modifiedString"></div>
+    <div id="dotCount"></div>
+    <div id="commaCount"></div>
+</body>
+</html>
